@@ -1,0 +1,6 @@
+google-genai
+python-dotenv
+flask
+flask-session
+flask-cors
+pymongo
