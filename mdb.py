@@ -1,7 +1,10 @@
 from pymongo import MongoClient
+from dotenv import load_dotenv
+import os 
+load_dotenv()
 
 # Connect to MongoDB
-client = MongoClient("mongodb+srv://jayanthkorupolu2004:narmada143@cluster0.kqfqh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")  # Change connection URL if needed
+client = MongoClient(os.getenv("MONGO_URI"))  # Change connection URL if needed
 db = client["nuti_db"]  # Create or connect to a database
 collection = db["Registration_collection"] 
 collection2 = db["User_Accounts"] # Create or connect to a collection
